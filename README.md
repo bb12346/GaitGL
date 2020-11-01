@@ -57,3 +57,12 @@ python test_oumvlp.py
 - `--batch_size` batch size of the parallel test. #Default: 1
 - `--cache` if set as TRUE all the test data will be loaded at once before the transforming start.
 This might accelerate the testing. #Default: FALSE
+
+#----------- CAISA-E---------------------------------
+### Train
+Train a model by
+```bash
+python train.py
+```
+**!!! ATTENTION !!! ATTENTION !!! ATTENTION !!!**
+Pre-training parameters need to be added.
