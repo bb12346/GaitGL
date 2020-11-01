@@ -25,11 +25,11 @@ E.g. `OUMVLP/00001/00/000/`.
 the silhouettes after pretreatment **MUST have a size of 64x64**.
 
 #### Pretreatment
-`pretreatment.py` uses the alignment method in
+`pretreatment_oumvlp.py` uses the alignment method in
 [this paper](https://ipsjcva.springeropen.com/articles/10.1186/s41074-018-0039-6).
 Pretreatment your dataset by
 ```
-python pretreatment.py --input_path='root_path_of_raw_dataset' --output_path='root_path_for_output'
+python pretreatment_oumvlp.py --input_path='root_path_of_raw_dataset' --output_path='root_path_for_output'
 ```
 - `--input_path` **(NECESSARY)** Root path of raw dataset.
 - `--output_path` **(NECESSARY)** Root path for output.
