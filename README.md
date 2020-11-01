@@ -21,7 +21,7 @@ by this two steps:
 - **Step1:** Organize the directory as: 
 `your_dataset_path/subject_ids/walking_conditions/views`.
 E.g. `OUMVLP/00001/00/000/`.
-- **Step2:** Cut and align the raw silhouettes with `pretreatment.py`.
+- **Step2:** Cut and align the raw silhouettes with `pretreatment_oumvlp.py`.
 the silhouettes after pretreatment **MUST have a size of 64x64**.
 
 #### Pretreatment
@@ -37,3 +37,23 @@ python pretreatment.py --input_path='root_path_of_raw_dataset' --output_path='ro
 - `--log` If set as True, all logs will be saved. 
 Otherwise, only warnings and errors will be saved. #Default: False
 - `--worker_num` How many subprocesses to use for data pretreatment. Default: 1
+
+### Train
+Train a model by
+```bash
+python train.py
+```
+- `--cache` if set as TRUE all the training data will be loaded at once before the training start.
+This will accelerate the training.
+**Note that** if this arg is set as FALSE, samples will NOT be kept in the memory
+even they have been used in the former iterations. #Default: TRUE
+
+### Evaluation
+Evaluate the trained model by
+```bash
+python test_oumvlp.py
+```
+- `--iter` iteration of the checkpoint to load. #Default: 250000
+- `--batch_size` batch size of the parallel test. #Default: 1
+- `--cache` if set as TRUE all the test data will be loaded at once before the transforming start.
+This might accelerate the testing. #Default: FALSE
