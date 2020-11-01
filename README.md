@@ -38,11 +38,14 @@ python pretreatment_oumvlp.py --input_path='root_path_of_raw_dataset' --output_p
 Otherwise, only warnings and errors will be saved. #Default: False
 - `--worker_num` How many subprocesses to use for data pretreatment. Default: 1
 
-### Train
+### Train 
 Train a model by
 ```bash
 python train.py
 ```
+'batch_size': (32, 8), 'frame_num': 30, 'total_iter': 250000.The
+learning rate is 1e − 4 in the first 150K iterations, and then is
+changed into 1e − 5 for the rest of 100K iterations.
 - `--cache` if set as TRUE all the training data will be loaded at once before the training start.
 This will accelerate the training.
 **Note that** if this arg is set as FALSE, samples will NOT be kept in the memory
@@ -64,17 +67,20 @@ This might accelerate the testing. #Default: FALSE
 Function generate_test_gallery() generate_train_gallery() generate_test_probe() from pt_casiae.py
 
 ### Train
+OUMVLP Pre-training parameters need to be added. [OUMVLP-pretrained](https://pan.baidu.com/s/1pH53yj4mfBtzmY0qPcV2uQ) key:121g  .
 Train a model by
 ```bash
 python train.py
 ```
-**!!! ATTENTION !!! ATTENTION !!! ATTENTION !!!**
-OUMVLP Pre-training parameters need to be added. [OUMVLP-pretrained](https://pan.baidu.com/s/1pH53yj4mfBtzmY0qPcV2uQ) key:121g  
+'batch_size': (12, 8), 'frame_num': 64, 'total_iter': 15000. The
+learning rate is 1e − 4 in the first 10K iterations, and then is
+changed into 1e − 5 for the rest of 5K iterations.
 
 ### Test
+Training parameters. [CASIA-E](https://pan.baidu.com/s/1DZe5yG__BS9f5PkH4jLq5w ) key:17g8 
 Test a model by using Function testout() from pt_casiae.py
 ```bash
 python pt_casiae.py
 ```
-Training parameters. [CASIA-E](https://pan.baidu.com/s/1DZe5yG__BS9f5PkH4jLq5w ) key:17g8 
+
 
