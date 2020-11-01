@@ -58,11 +58,23 @@ python test_oumvlp.py
 - `--cache` if set as TRUE all the test data will be loaded at once before the transforming start.
 This might accelerate the testing. #Default: FALSE
 
-#----------- CAISA-E---------------------------------
+### CAISA-E
+
+### Dataset & Preparation
+Function generate_test_gallery() generate_train_gallery() generate_test_probe() from pt_casiae.py
+
 ### Train
 Train a model by
 ```bash
 python train.py
 ```
 **!!! ATTENTION !!! ATTENTION !!! ATTENTION !!!**
-Pre-training parameters need to be added.
+OUMVLP Pre-training parameters need to be added. [OUMVLP-pretrained](https://pan.baidu.com/s/1pH53yj4mfBtzmY0qPcV2uQ) key:121g  
+
+### Test
+Test a model by using Function testout() from pt_casiae.py
+```bash
+python pt_casiae.py
+```
+Training parameters. [CASIA-E](https://pan.baidu.com/s/1DZe5yG__BS9f5PkH4jLq5w ) key:17g8 
+
