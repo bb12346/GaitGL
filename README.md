@@ -82,5 +82,12 @@ Test a model by using Function testout() from pt_casiae.py
 ```bash
 python pt_casiae.py
 ```
-
+## Citation
+Please cite these papers in your publications if it helps your research:
+```
+@article{linlearning,
+  title={Learning Effective Representations from Global and Local Features for Cross-View Gait Recognition},
+  author={Lin, Beibei and Zhang, Shunli and Yu, Xin and Kong, Chuihan and Wan, Chenwei}
+}
+```
 
