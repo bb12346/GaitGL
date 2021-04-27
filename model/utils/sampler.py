@@ -10,7 +10,9 @@ class TripletSampler(tordata.sampler.Sampler):
     def __iter__(self):
         while (True):
             sample_indices = list()
-            pid_list = random.choices(list(self.dataset.label_set), k=self.batch_size[0])
+            pid_list = random.sample(
+                list(self.dataset.label_set),
+                self.batch_size[0])
             for pid in pid_list:
                 _index = self.dataset.index_dict.loc[pid, :, :].values
                 _index = _index[_index > 0].flatten().tolist()
